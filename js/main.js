@@ -24,7 +24,13 @@ window.addEventListener('scroll',function(){
     scrolltotop.classList.toggle('active', window.scrollY > 500);
  
 });
- 
+scrolltotop.addEventListener("click", (event) => {
+  event.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
 //javascript for responsive navigation sidebar menu
 const menuBtn = document.querySelector(".menu-btn");
